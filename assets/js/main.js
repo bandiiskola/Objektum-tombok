@@ -51,3 +51,21 @@ function Kilep()
     document.getElementById("tagfelvitel").style.display="none"
     document.getElementById("osztalynev").focus()
 }
+
+function Lista()
+{
+    document.getElementById("osztalyfelvitel").style.display="none"
+    var s = ""
+    for (var i=0;i<lista.length;i++)
+    {
+        s="<h3>"+lista[i].osztalynev+", oszt.f: "+lista[i].osztalyfonoknev+"</h3>"
+        s+="<ol>"
+        for (var j=0;j<lista.tagok.length;j++)
+        {
+            s+="<li>"+lista[i].tagok[j].diaknev+", "+lista[i].tagok[j].lakohely+"</li>"
+        }
+        s+="</ol>"
+    }
+    document.getElementById("listanezet").innerHTML=s
+    document.getElementById("listanezet").style.display="block"
+}
