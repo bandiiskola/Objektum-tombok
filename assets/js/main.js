@@ -14,5 +14,8 @@ function TagokFelvitele()
             osztalyfonoknev: document.getElementById("osztalyfonoknev").value,
             tagok: []
         }
+        lista.push(obj)
+        document.getElementById("osztalyfelvitel").style.display="none"
+        document.getElementById("tagfelvitel").style.display="block"
     }
 }
